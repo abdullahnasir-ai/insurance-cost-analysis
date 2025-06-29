@@ -1,0 +1,75 @@
+Insurance Cost Analysis – Final Results
+=======================================
+
+1. Smoker vs Non-Smoker
+------------------------
+The average insurance cost for a smoker is $6,563.35, whereas the average for a non-smoker is $6,707.07.
+
+Interpretation:
+This result is unexpected, as smokers typically pay more due to higher health risks. In this dataset, smokers pay slightly less than non-smokers. This may be due to an imbalance in the number of smokers vs non-smokers, or the influence of other variables like age or region that were not isolated in this analysis.
+
+---
+
+2. Number of Children vs Insurance Cost
+---------------------------------------
+Average costs by number of children:
+- 0 children: $12,365.98
+- 1 child: $12,731.17
+- 2 children: $15,073.56
+- 3 children: $15,355.32
+- 4 children: $13,850.66
+- 5 children: $8,786.04
+
+Interpretation:
+There is a modest increase in insurance cost with up to 3 children, after which the trend becomes inconsistent. This suggests other factors may outweigh the number of dependents beyond a certain point.
+
+---
+
+3. Gender and Insurance Cost
+----------------------------
+- Male average cost: $13,956.75
+- Female average cost: $12,569.58
+
+Interpretation:
+Males have slightly higher average insurance costs than females in this dataset. However, the difference is not extreme and could be influenced by other variables (e.g., age, smoking).
+
+---
+
+4. Age and Insurance Cost (by decade)
+-------------------------------------
+- Teens: $9,249.91
+- Age 20s: $11,216.67
+- Age 30s: $20,178.14
+- Age 40s: $10,945.38
+- Age 50s: $16,982.16
+- Age 60s: $23,055.24
+
+Interpretation:
+Insurance cost increases with age, especially in the 30s and 60s age brackets. This reflects how health risks tend to rise as individuals get older, resulting in higher premiums.
+
+---
+
+5. Region vs Insurance Cost
+---------------------------
+- Southwest: $12,346.94
+- Southeast: $14,735.41
+- Northwest: $12,417.58
+- Northeast: $13,406.38
+
+Interpretation:
+The Southeast region has the highest average insurance costs, while the Southwest and Northwest are lower. These differences may reflect regional health behaviours, access to healthcare, or policy pricing.
+
+---
+
+Limitations
+===========
+1. **Sample Size**: The dataset contains 1,338 entries — a decent number, but not large enough to fully represent all population groups.
+2. **No Contextual Variables**: The dataset lacks information like income, education, or medical history, which could influence insurance costs.
+3. **Causality vs Correlation**: These results show **correlation**, not causation — for example, being older doesn’t *cause* higher costs directly; it's associated with greater health risks.
+4. **Outliers**: Some data points (e.g., high-cost smokers) may skew the averages. A deeper analysis would remove or handle these for more accuracy.
+
+---
+
+Conclusion
+==========
+This analysis highlights the variability and complexity of insurance pricing. While age and region show expected trends, other factors like smoking and number of children produce surprising results. It reinforces the importance of examining the full context and combining multiple features for deeper insight.
