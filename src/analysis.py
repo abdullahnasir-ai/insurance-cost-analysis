@@ -5,7 +5,7 @@ sex = [data['sex'] for data in data_list]
 bmi = [data['bmi'] for data in data_list]
 num_of_children = [data['children'] for data in data_list]
 smoker = [data['smoker'] for data in data_list]
-region = [data['region'] for data in data_list]
+regions = [data['region'] for data in data_list]
 insurance_cost = [data['charges'] for data in data_list]
 
 def smoker_cost(smoker, insurance_cost):
@@ -60,6 +60,20 @@ def cost_by_age(ages, insurance_cost):
         if count > 0:
             dict_age[i] = f"{total_cost / count:.2f}"
     return dict_age
+
+def cost_per_region(regions, insurance_cost):
+    region_cost = {}
+    for i in range(len(regions)):
+        region = regions[i]
+        if region not in region_cost:
+            region_cost[region] = 0
+        region_cost[region] += float(insurance_cost[i])
+    final_string = ""
+    for key, value in region_cost.items():
+        count = regions.count(key)
+        final_string += f"The average insurance cost for an individual living in the {key} is {value / count:.2f}. \n"
+    return final_string
+
 
 
 
