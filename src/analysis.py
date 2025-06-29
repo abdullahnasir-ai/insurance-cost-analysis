@@ -1,6 +1,6 @@
 from src.file_reader import data_list
 
-age = [data['age'] for data in data_list]
+ages = [data['age'] for data in data_list]
 sex = [data['sex'] for data in data_list]
 bmi = [data['bmi'] for data in data_list]
 num_of_children = [data['children'] for data in data_list]
@@ -43,6 +43,24 @@ def cost_by_sex(sex, insurance_cost):
         else:
             total_cost_f += float(insurance_cost[i])
     return f"The average insurance cost for males is {total_cost_m / sex.count("male"):.2f}, and the average insurance cost for females is {total_cost_f / sex.count("female"):.2f}."
+
+def cost_by_age(ages, insurance_cost):
+    dict_age = {}
+    min_age = (int(min(ages)) // 10) * 10
+    max_age = (int(max(ages)) // 10) * 10
+    for i in range(min_age, max_age + 10, 10):
+        total_cost = 0
+        count = 0
+        for age in ages:
+            index = ages.index(age)
+            age_int = int(age)
+            if i <= age_int < i + 10:
+                count += 1
+                total_cost += float(insurance_cost[index])
+        if count > 0:
+            dict_age[i] = f"{total_cost / count:.2f}"
+    return dict_age
+
 
 
 
