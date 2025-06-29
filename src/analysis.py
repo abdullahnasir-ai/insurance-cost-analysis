@@ -34,6 +34,17 @@ def children_cost(num_of_children, insurance_cost):
             final_string += f"For Individuals with {key} children the average cost of insurance is {(value / count):.2f}. \n"
     return final_string
 
+def cost_by_sex(sex, insurance_cost):
+    total_cost_m = 0
+    total_cost_f = 0
+    for i in range(len(sex)):
+        if sex[i] == "male":
+            total_cost_m += float(insurance_cost[i])
+        else:
+            total_cost_f += float(insurance_cost[i])
+    return f"The average insurance cost for males is {total_cost_m / sex.count("male"):.2f}, and the average insurance cost for females is {total_cost_f / sex.count("female"):.2f}."
+
+
 
 
 
