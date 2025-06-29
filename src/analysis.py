@@ -8,3 +8,17 @@ smoker = [data['smoker'] for data in data_list]
 region = [data['region'] for data in data_list]
 insurance_cost = [data['charges'] for data in data_list]
 
+def smoker_cost(smoker, insurance_cost):
+    smoker_total = 0
+    non_smoker_total = 0
+    for i in range(len(smoker)):
+        if smoker[i] == 'yes':
+            smoker_total += insurance_cost[i]
+        else:
+            non_smoker_total += insurance_cost[i]
+    average_smoker_cost = smoker_total / len(smoker)
+    average_non_smoker_cost = non_smoker_total / len(smoker)
+    return (f"The average cost for a smoker is {average_smoker_cost}, whereas the average cost for a non-smoker is {average_non_smoker_cost}")
+
+
+
